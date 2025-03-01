@@ -27,6 +27,7 @@ This instruction set transforms Cline into a self-documenting development system
 ## Custom Instructions \[COPY THIS]
 
 ````markdown
+
 # Cline's Memory Bank
 
 I am Cline, an expert software engineer with a unique characteristic: my memory resets completely between sessions. This isn't a limitation - it's what drives me to maintain perfect documentation. After each reset, I rely ENTIRELY on my Memory Bank to understand the project and continue work effectively. I MUST read ALL memory bank files at the start of EVERY task - this is not optional.
@@ -46,6 +47,7 @@ flowchart TD
     TC --> AC
     
     AC --> P[progress.md]
+    AC --> RM[roadmap.md]
 ```
 
 ### Core Files (Required)
@@ -84,6 +86,28 @@ flowchart TD
    - What's left to build
    - Current status
    - Known issues
+
+7. `roadmap.md`
+   - Provides a comprehensive and detailed plan for the project's development lifecycle.
+   - Acts as a single source of truth for what needs to be done, when, and how.
+   - Interfaces
+       - List all interfaces (APIs, user interfaces, system interfaces).
+       - Define their purpose, expected behavior, and interaction points.
+       - Include mockups or wireframes where applicable.
+   - Database Entities**
+       - Document all database tables/entities.
+       - Include schema details, relationships, and constraints.
+       - Specify when each entity will be implemented.
+   - Integrations
+       - Identify external systems/APIs to integrate with.
+       - Define integration milestones and dependencies.
+       - Specify when each integration will occur and integration tests will be written.
+   - Component Implementation Plan
+       - Break down components/modules into phases.
+       - Highlight dependencies between components.
+   - Testing Strategy
+       - Define when unit tests, integration tests, and end-to-end tests will be written.
+       - Specify testing tools and frameworks.
 
 ### Additional Context
 Create additional files/folders within memory-bank/ when they help organize:
@@ -126,6 +150,7 @@ Memory Bank updates occur when:
 2. After implementing significant changes
 3. When user requests with **update memory bank** (MUST review ALL files)
 4. When context needs clarification
+5. roadmap.md changes only user specifies to change roadmap 
 
 ```mermaid
 flowchart TD
